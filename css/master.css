@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+  box-sizing: border-box;
+  transition: all ease-in-out 250ms;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 95%;
+  max-width: 70em;
+  margin: 0 auto;
+}
+
+.clearfix::after,
+section::after,
+footer:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* COLUMN SYSTEM - 6 COLUMN*/
+
+
+[class^=col-] {
+  width: 100%;
+  margin-top: 1em;
+}
+
+[class^=col-]:first-child {
+  margin-top: 0;
+}
+
+.col-1 {
+  width: 33.3333334%;
+  float: left;
+}
+
+@media (min-width: 40rem) {
+  [class^=col-] {
+    float: left;
+    padding: 0 .5em;
+    width: 100%;
+  }
+
+  [class^=col-]:first-child {
+    padding-left: 0;
+  }
+
+  [class^=col-]:last-child {
+    padding-right: 0;
+  }
+
+  .col-1 {
+    width: 16.6666%;
+  }
+
+  .col-3 {
+    width: 50%;
+  }
+}
+
+/* Typography */
+h1 {
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.7rem;
+  margin-top: 0;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5em;
+  font-weight: 900;
+  margin-top: 1em;
+}
+
+.title span {
+  font-weight: 300;
+  display: block;
+  font-size: .9em;
+}
+
+.title-cta {
+  margin-bottom: 0 0 .5em;
+}
+
+.unstyled-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 60rem) {
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  font-size: 1.15rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  padding: .5em 1.75em;
+}
+
+@media (min-width: 60rem) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+.btn-small {
+  font-size: .7rem;
+}
+
+.btn-accent {
+  color: #ecf0f1;
+  border-color: #ecf0f1;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  background: #000;
+  color: #fff;
+}
+
+@media (min-width: 60rem) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* HEADER */
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 1em;
+}
+
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin: 1em;
+}
+
+nav a {
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8rem;
+  padding: .5em;
+  color: #fff;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #DDD;
+}
+
+@media (min-width: 60rem) {
+  .logo {
+    float: left;
+  }
+
+  nav {
+    float: right;
+  }
+}
+
+/* HOME HERO */
+.home-hero {
+  background-image: url(../img/hero-bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 10em 0;
+  color: #fff;
+}
+
+ @media (min-width: 60rem) {
+   .home-hero {
+     height: 100vh;
+     padding-top: 35vh;
+   }
+ }
+
+/* HOME ABOUT */
+.home-about-textbox {
+  background-color: #232323;
+  padding: 3em;
+  width: 100vw;
+  margin-left: -2.7%;
+  outline: 2px solid #b80f22;
+  outline-offset: -2.5em;
+  color: #ecf0f1;
+  position: relative;
+}
+
+.home-about-textbox h1 {
+  color: #b80f22;
+  position: absolute;
+  top: .75em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #232323;
+  padding: 0 .145em;
+}
+
+ @media (min-width: 25rem) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .home-about-textbox h1 {
+    top: .1em;
+    padding: 0 .325em;
+  }
+}
+
+@media (min-width: 60rem) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .home-about {
+    background-image: url(../img/what-are-we.jpeg);
+    padding: 5em;
+    background-repeat: no-repeat;
+    padding-bottom: 10em;
+  }
+
+  .home-about-textbox {
+    width: 50%;
+    padding: 7em;
+    outline-offset: -3.75em;
+    margin-left: -2.5%;
+    top: -5em;
+    text-align: left;
+    box-shadow: 0 0 3em 0 rgba(0, 0, 0, .3);
+  }
+
+  .home-about-textbox h1 {
+    top: .3em;
+    left: 6rem;
+    transform: translateX(0);
+  }
+}
+
+/* PORTFOLIO */
+.portfolio {
+  margin: 3em 0 0;
+}
+
+figure {
+  margin: 0;
+}
+
+.portfolio-item {
+  position: relative;
+}
+
+.portfolio-item img {
+  display: block;
+}
+
+
+.portfolio-description {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  left: 0;
+  right: 0;
+  padding-bottom: 1em;
+}
+
+.portfolio-description p {
+  margin: 0;
+}
+
+@media (min-width: 37rem) {
+  .portfolio-item {
+    width: 50%;
+    float: left;
+  }
+}
+@media (min-width: 60rem) {
+  .portfolio-item {
+    width: 33.3333334%;
+    overflow: hidden;
+  }
+
+  .portfolio-description {
+    transform: translateY(150%);
+  }
+
+  .portfolio-item:hover .portfolio-description {
+    transform: translateY(0);
+  }
+}
+
+/* CALL TO ACTION */
+.cta {
+  background-color: #b80f22;
+  padding: 5em 0;
+}
+
+/* FOOTER */
+
+footer {
+  background: #232323;
+  color: #fff;
+  text-align: left;
+  padding: 5em 0;
+}
